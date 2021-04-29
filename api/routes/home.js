@@ -1,4 +1,4 @@
-const homeHandler = require('./handlers');
+const homeHandler = require('../handlers/homeHandlers');
 
 const homeRoute = {
   method: 'GET',

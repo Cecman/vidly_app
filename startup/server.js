@@ -1,9 +1,9 @@
 require('dotenv').config();
-const port = process.env.PORT || 5000;
 const Hapi = require('@hapi/hapi');
-const db = require('../src/db/db');
 const router = require('./router');
+require('../src/db/connection');
 
+const port = process.env.PORT || 5000;
 
 const init = async () => {
   const server = Hapi.server({
