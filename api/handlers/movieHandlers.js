@@ -1,5 +1,6 @@
 const db = require('../../src/db/connection');
 
+
 const getAllMovies = async (request, h) => {
   const sql = 'SELECT * FROM movies';
   db.query(sql, (err, results) => {
