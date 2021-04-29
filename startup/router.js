@@ -1,9 +1,5 @@
+const homeRoute = require('../api/routes');
+
 module.exports = (server) =>{
-    server.route({
-        method: 'GET',
-        path: '/',
-        handler: (request, h) =>{
-            return 'Hello World!'
-        }
-    })
+    server.route(homeRoute)
 }
