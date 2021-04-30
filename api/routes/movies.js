@@ -1,5 +1,5 @@
 const tcHandler = require('../error');
-const getAllMovies = require('../handlers/movieHandlers');
+const { getAllMovies, createMovie } = require('../handlers/movieHandlers');
 
 const getMovies = {
   method: 'GET',
@@ -7,4 +7,10 @@ const getMovies = {
   handler: tcHandler(getAllMovies),
 };
 
-module.exports = getMovies;
+const postMovie = {
+  method: 'POST',
+  path: '/create/movie',
+  handler: tcHandler(createMovie),
+};
+
+module.exports = { getMovies, postMovie };
